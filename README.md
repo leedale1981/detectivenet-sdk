@@ -1,1 +1,1 @@
-# dotnetdetective
+# Dotnet Detective SDK
