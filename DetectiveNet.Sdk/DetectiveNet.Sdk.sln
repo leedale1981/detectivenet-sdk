@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectiveNet.Domain.Model", "..\DetectiveNet.Domain.Model\DetectiveNet.Domain.Model.csproj", "{F1EB2872-7FFF-42A8-B34A-C4129C0E5E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectiveNet.Sdk", "DetectiveNet.Sdk.csproj", "{6CBB8ACD-E2A5-466C-859E-5FA04BDD6F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectiveNet.Sdk.Tests", "..\DetectiveNet.Sdk.Tests\DetectiveNet.Sdk.Tests.csproj", "{BC753318-F124-44A1-A2B9-3C0913EC2F9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1EB2872-7FFF-42A8-B34A-C4129C0E5E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EB2872-7FFF-42A8-B34A-C4129C0E5E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EB2872-7FFF-42A8-B34A-C4129C0E5E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EB2872-7FFF-42A8-B34A-C4129C0E5E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBB8ACD-E2A5-466C-859E-5FA04BDD6F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBB8ACD-E2A5-466C-859E-5FA04BDD6F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBB8ACD-E2A5-466C-859E-5FA04BDD6F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBB8ACD-E2A5-466C-859E-5FA04BDD6F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC753318-F124-44A1-A2B9-3C0913EC2F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC753318-F124-44A1-A2B9-3C0913EC2F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC753318-F124-44A1-A2B9-3C0913EC2F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC753318-F124-44A1-A2B9-3C0913EC2F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
