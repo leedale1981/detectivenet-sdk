@@ -1,4 +1,6 @@
-﻿namespace DetectiveNet.Sdk;
+﻿using System.Collections;
+
+namespace DetectiveNet.Sdk;
 
 public abstract class DiskReaderBase<T> : IDiskReader<T>
 {
@@ -21,5 +23,13 @@ public abstract class DiskReaderBase<T> : IDiskReader<T>
         }
 
         return sectionBytes;
+    }
+    
+    protected int ConvertBitsToInteger(byte[] sectionBytes)
+    {
+        BitArray bits = new BitArray(sectionBytes);
+        int[] integers = new int[1];
+        bits.CopyTo(integers, 0);
+        return integers[0];
     }
 }

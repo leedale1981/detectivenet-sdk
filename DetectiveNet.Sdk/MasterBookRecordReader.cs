@@ -23,10 +23,15 @@ public class MasterBootRecordReader : DiskReaderBase<MasterBootRecord>
             {
                 Hex = BitConverter.ToString(bytes),
                 IsBootable = GetIsBootable(bytes),
-                StartHead = int.Parse(BitConverter.ToString(GetSectionBytes(bytes, 447, 1))),
-                StartSector = int.Parse(BitConverter.ToString(GetSectionBytes(bytes, 448, 1))),
-                StartCylinder = int.Parse(BitConverter.ToString(GetSectionBytes(bytes, 449, 1))),
-                SystemId = GetPartitionType(BitConverter.ToString(GetSectionBytes(bytes, 450, 1)))
+                StartHead = ConvertBitsToInteger(GetSectionBytes(bytes, 447, 1)),
+                StartSector = ConvertBitsToInteger(GetSectionBytes(bytes, 448, 1)),
+                StartCylinder = ConvertBitsToInteger(GetSectionBytes(bytes, 449, 1)),
+                SystemId = GetPartitionType(BitConverter.ToString(GetSectionBytes(bytes, 450, 1))),
+                EndHead = ConvertBitsToInteger(GetSectionBytes(bytes, 451, 1)),
+                EndSector = ConvertBitsToInteger(GetSectionBytes(bytes, 452, 1)),
+                EndCylinder = ConvertBitsToInteger(GetSectionBytes(bytes, 453, 1)),
+                RelativeSectors = ConvertBitsToInteger(GetSectionBytes(bytes, 454, 4)),
+                TotalSectors = ConvertBitsToInteger(GetSectionBytes(bytes, 458, 4)),
             };
         }
 
@@ -35,7 +40,8 @@ public class MasterBootRecordReader : DiskReaderBase<MasterBootRecord>
 
     private bool IsMbr(byte[] bytes)
     {
-        
+        byte[] endSigBytes = GetSectionBytes(bytes, 510, 2);
+        return BitConverter.ToString(endSigBytes) == "55-AA";
     }
 
     private bool GetIsBootable(byte[] bytes)

@@ -6,7 +6,7 @@ public class MasterBootRecordTests
 {
     // Place a test image in this directory. Not included in source as files are too large.
     private readonly string _pathToImage = 
-        $"{Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."))}{Path.DirectorySeparatorChar}TestImages{Path.DirectorySeparatorChar}disk.dd";
+        $"{Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"..{Path.DirectorySeparatorChar}..{Path.DirectorySeparatorChar}.."))}{Path.DirectorySeparatorChar}TestImages{Path.DirectorySeparatorChar}disk.dd";
 
     [Fact]
     public void GetBootIndicatorFromImageSuccessful()
@@ -35,7 +35,7 @@ public class MasterBootRecordTests
         Assert.NotNull(mbr);
         Assert.Equal(1, mbr.StartHead);
     }
-    
+
     [Fact]
     public void GetStartingSectorFromImageSuccessful()
     {
