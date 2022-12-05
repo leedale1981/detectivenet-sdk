@@ -40,7 +40,7 @@ jobs:
       run: dotnet build $SOLUTION --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION
 
     - name: Run tests
-      run: dotnet test /p:Configuration=$env:BUILD_CONFIG --no-restore --no-build --verbosity normal
+      run: dotnet test $SOLUTION /p:Configuration=$env:BUILD_CONFIG --verbosity normal
       
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
