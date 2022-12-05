@@ -17,7 +17,7 @@ jobs:
     env:
       BUILD_CONFIG: 'Release'
       SOLUTION: './DetectiveNet.Sdk/DetectiveNet.Sdk.sln'
-      LIBRARY: './DetectiveNet.Sdk/DetectiveNet.csproj'
+      LIBRARY: './DetectiveNet.Sdk/DetectiveNet.Sdk.csproj'
 
     runs-on: ubuntu-latest
 
