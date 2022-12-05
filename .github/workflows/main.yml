@@ -37,7 +37,7 @@ jobs:
         dotnet-version: 7.x.x
 
     - name: Build
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION
+      run: dotnet publish $SOLUTION --configuration $BUILD_CONFIG -p:Version=$BUILD_VERSION
       
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
